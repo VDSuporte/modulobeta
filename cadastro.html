@@ -357,51 +357,35 @@
 
 
     <script>
-        
-            
-            document.getElementById('enviarBtn').addEventListener('click', function (event) {
-        event.preventDefault(); // Impedir o envio do formulário padrão
-
-        const cliente = document.getElementById('username').value;
-        const data = document.getElementById('email').value;
-        const quantidade = document.getElementById('password').value;
-        const valorUnitario = document.getElementById('password_confirm').value;
-
-        // Criar uma nova linha com os dados do formulário
-        const novaLinha = [cliente, data, quantidade, valorUnitario];
-
-        // Verificar se há dados armazenados localmente
-        let jsonData = [['Usuário', 'E-mail', 'Senha', 'Confirme a Senha']];
-
-        const dadosExistentes = localStorage.getItem('teste');
-        if (dadosExistentes) {
-            const workbook = XLSX.read(dadosExistentes, { type: 'base64' });
-            const sheetName = workbook.SheetNames[0];
-            const worksheet = workbook.Sheets[sheetName];
-            jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-        }
-
-        // Adicionar a nova linha ao array
-        jsonData.push(novaLinha);
-
-        // Converter o array de volta para uma planilha
-        const novoWorksheet = XLSX.utils.aoa_to_sheet(jsonData);
-
-        // Criar um novo workbook
-        const novoWorkbook = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(novoWorkbook, novoWorksheet, 'teste');
-
-        // Salvar o novo workbook como um arquivo Excel
-        XLSX.writeFile(novoWorkbook, 'dados_teste.xlsx');
-
-        // Exibir mensagem de sucesso
-        alert('Dados salvos com sucesso!');
-
-        // Resetar os campos do formulário
-        document.querySelector('.form').reset();
-    });
-            
+        document.getElementById('enviarBtn').addEventListener('click', function (event) {
+            event.preventDefault(); // Impedir o envio do formulário padrão
+    
+            const nome = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('password').value;
+            const confirmarSenha = document.getElementById('password_confirm').value;
+    
+            // Criar o objeto de dados a ser enviado
+            const formData = new URLSearchParams();
+            formData.append('nome', nome);
+            formData.append('email', email);
+            formData.append('senha', senha);
+            formData.append('confirmarSenha', confirmarSenha);
+    
+            // Enviar os dados para o Web App do Google Apps Script
+            fetch('https://script.google.com/macros/s/AKfycbxIiAGAFz4wmODahwyQLXeIL6RXSgc-APPkqwbaPqPe-viOjN82L9SHuUDv80hUfDsd/exec', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);  // Exibir a resposta do servidor (sucesso)
+                document.querySelector('.form').reset();  // Resetar os campos do formulário
+            })
+            .catch(error => console.error('Erro:', error));
+        });
     </script>
+    
 </body>
 </html>
     
