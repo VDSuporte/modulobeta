@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="form-cavalos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <title>Cadastro de Cavalos</title>
+</head>
+<body>
+    <button class="btn btn-primary back-button" onclick="window.history.back();">
+        <i class="bi bi-arrow-left-circle-fill"></i>
+    </button>
+
+    <img class="footer-image" src="rodapépreto.jpg">
+    <img class="image1" src="linhadocabeçalho.jpg">
+    <a href="menu.html">
+        <img class="image3" src="logoVD_FundoEscuro.png">
+    </a>
+
+<div class="container form-background">
+    <form action="" method="post">
+        <header class="container header-text">Cadastro de Cavalo</header>
+
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Primeira coluna de campos do formulário -->
+                <label for="frota">Frota</label>
+                <input type="text" id="frota" name="frota" class="form-control">
+
+                <label for="placa">Placa</label>
+                <input type="text" id="placa" name="placa" class="form-control">
+
+                <label for="motorista">Motorista padrão</label>
+                <input type="text" id="motorista" name="motorista" class="form-control">
+
+                <label for="renavam">Renavam</label>
+                <input type="text" id="renavam" name="renavam" class="form-control">
+
+                <label for="anomod">Ano / Modelo</label>
+                <select id="anomod" name="anomod" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="A">2024/2024</option>
+                    <option value="B">2023/2024</option>
+                    <option value="C">2022/2023</option>
+                    <option value="D">2021/2022</option>
+                    <option value="E">2020/2021</option>
+                    <option value="F">2019/2020</option>
+                    <option value="G">2018/2019</option>
+                    <option value="H">2017/2018</option>
+                </select>
+
+                <label for="cor">Cor</label>
+                <select id="cor" name="cor" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="B">Branco</option>
+                    <option value="P">Preto</option>
+                    <option value="V">Verde</option>
+                    <option value="V">Vermelho</option>
+                </select>
+
+                <label for="chassi">Chassi</label>
+                <input type="text" id="chassi" name="chassi" class="form-control">
+
+                <label for="crlv">CRLV</label>
+                <input type="text" id="crlv" name="crlv" class="form-control">
+
+                <label for="marca">Marca</label>
+                <select id="marca" name="marca" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="D">DAF</option>
+                    <option value="S">Scania</option>
+                    <option value="V">Volvo</option>
+                </select>
+
+                <label for="modelo">Modelo</label>
+                <select id="modelo" name="modelo" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="R">R 450</option>
+                    <option value="F">FH 460</option>
+                    <option value="F">FH 540</option>
+                </select>
+
+                <label for="suspensao">Suspensão</label>
+                <select id="suspensao" name="suspensao" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="M">Mecânica</option>
+                    <option value="P">Pneumática</option>
+                </select>
+
+                <label for="tracao">Tração</label>
+                <select id="tracao" name="tracao" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="2">6x2</option>
+                    <option value="4">6x4</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <!-- Segunda coluna de campos do formulário -->
+                <label for="altura">Altura</label>
+                <input type="text" id="altura" name="altura" class="form-control">
+
+                <label for="capdiesel">Capacidade de Diesel</label>
+                <input type="text" id="capdiesel" name="capdiesel" class="form-control">
+
+                <label for="pbt">PBT</label>
+                <input type="number" id="pbt" name="pbt" class="form-control">
+
+                <label for="tara">Tara</label>
+                <input type="number" id="tara" name="tara" class="form-control">
+
+                <label for="locado">Locado</label>
+                <select id="locado" name="locado" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="A">Araucária</option>
+                    <option value="C">Canoas</option>
+                    <option value="C">Cubatão</option>
+                    <option value="I">Itajaí</option>
+                    <option value="P">Paulínia</option>
+                </select>
+
+                <label for="macaricoele">Maçarico eletrônico</label>
+                <select id="macaricoele" name="macaricoele" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="S">Sim</option>
+                    <option value="N">Não</option>
+                </select>
+
+                <label for="bombadeasfalto">Bomba de Asfalto</label>
+                <select id="bombadeasfalto" name="bombadeasfalto" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="S">Sim</option>
+                    <option value="N">Não</option>
+                </select>
+
+                <label for="bombahidraulica">Bomba Hidráulica</label>
+                <select id="bombahidraulica" name="bombahidraulica" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="S">Sim</option>
+                    <option value="N">Não</option>
+                </select>
+
+                <label for="esperatforca">Espera Toma de Força</label>
+                <select id="esperatforca" name="esperatforca" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="S">Sim</option>
+                    <option value="N">Não</option>
+                </select>
+
+                <label for="placasolar">Placa Solar</label>
+                <select id="placasolar" name="placasolar" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="S">Sim</option>
+                    <option value="N">Não</option>
+                </select>
+
+                <label for="status">Status</label>
+                <select id="status" name="status" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="A">Agregado</option>
+                    <option value="O">Operação</option>
+                    <option value="V">Vendido</option>
+                </select>
+
+                <label for="bloqueador">Bloqueador</label>
+                <select id="bloqueador" name="bloqueador" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="A">Antigo Cirio</option>
+                    <option value="M">Moderno Cirio</option>
+                    <option value="I">Ingomar</option>
+                </select>
+
+                <label for="transportadora">Transportadora</label>
+                <select id="transportadora" name="transportadora" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="A">VIA AVANT</option>
+                    <option value="D">VIA DUPLA</option>
+                    <option value="G">GOTTA LTDA</option>
+                    <option value="R">MR LTDA</option>
+                    <option value="R">R.J.M Andrade</option>
+                </select>
+
+                <label for="notafiscal">Nota Fiscal</label>
+                <select id="notafiscal" name="notafiscal" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="S">Sim</option>
+                    <option value="N">Não</option>
+                </select>
+
+                <label for="velocidade">Velocidade</label>
+                <select id="velocidade" name="velocidade" class="form-control">
+                    <option value="" selected>Selecionar</option>
+                    <option value="F">FMS</option>
+                    <option value="G">GPS</option>
+                    <option value="M">MAXTRACK</option>
+                    <option value="T">TAC</option>
+                </select>
+
+                <label for="fimdegarantia">Fim de Garantia</label>
+                <input type="text" id="fimdegarantia" name="fimdegarantia" class="form-control" value="00/00/2024">
+
+                <label for="dataentregatecnica">Data Entrega Técnica</label>
+                <input type="text" id="dataentregatecnica" name="dataentregatecnica" class="form-control" value="00/00/2024">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Impede o envio tradicional
+
+        // Coleta os dados do formulário
+        var formData = {
+            frota: document.getElementById("frota").value,
+            placa: document.getElementById("placa").value,
+            motorista: document.getElementById("motorista").value,
+            renavam: document.getElementById("renavam").value,
+            anomod: document.getElementById("anomod").value,
+            cor: document.getElementById("cor").value,
+            chassi: document.getElementById("chassi").value,
+            crlv: document.getElementById("crlv").value,
+            marca: document.getElementById("marca").value,
+            modelo: document.getElementById("modelo").value,
+            suspensao: document.getElementById("suspensao").value,
+            tracao: document.getElementById("tracao").value,
+            altura: document.getElementById("altura").value,
+            capdiesel: document.getElementById("capdiesel").value,
+            pbt: document.getElementById("pbt").value,
+            tara: document.getElementById("tara").value,
+            locado: document.getElementById("locado").value,
+            macaricoele: document.getElementById("macaricoele").value,
+            bombadeasfalto: document.getElementById("bombadeasfalto").value,
+            bombahidraulica: document.getElementById("bombahidraulica").value,
+            esperatforca: document.getElementById("esperatforca").value,
+            placasolar: document.getElementById("placasolar").value,
+            status: document.getElementById("status").value,
+            bloqueador: document.getElementById("bloqueador").value,
+            transportadora: document.getElementById("transportadora").value,
+            notafiscal: document.getElementById("notafiscal").value,
+            velocidade: document.getElementById("velocidade").value,
+            fimdegarantia: document.getElementById("fimdegarantia").value,
+            dataentregatecnica: document.getElementById("dataentregatecnica").value
+        };
+
+        // Envia os dados para o Google Apps Script
+        fetch("https://script.google.com/macros/s/AKfycbwNHg7l_v6gCBZFsseFteWFTGGdvBfih385vX8m9IoiWVlGKKhiYtr4ZuSUa6pGba-E/exec", {
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: { "Content-Type": "application/json" }
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data); // Exibe a mensagem de sucesso ou erro
+        })
+        .catch(error => {
+            console.error("Erro ao enviar os dados:", error);
+        });
+    });
+</script>
+
+
+</body>
+</html>
